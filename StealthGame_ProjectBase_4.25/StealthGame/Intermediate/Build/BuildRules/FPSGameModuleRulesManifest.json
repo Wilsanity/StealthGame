@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"D:\\C++\\Project-Stealth\\StealthGame_ProjectBase_4.25\\StealthGame\\Source\\FPSGame\\FPSGame.Build.cs",
+		"D:\\C++\\Project-Stealth\\StealthGame_ProjectBase_4.25\\StealthGame\\Source\\FPSGame.Target.cs",
+		"D:\\C++\\Project-Stealth\\StealthGame_ProjectBase_4.25\\StealthGame\\Source\\FPSGameEditor.Target.cs"
+	],
+	"EngineVersion": "4.25.3"
+}
