@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\FPSGame.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{C3548435-277E-467F-81E0-A9D19CDC7155}</UniqueIdentifier>
+      <UniqueIdentifier>{0BC6A761-541A-43E5-94E0-EF746CF69CD6}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\FPSGame.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{F95C381E-CD33-4471-8DAA-11C513CFE83A}</UniqueIdentifier>
+      <UniqueIdentifier>{F10367D5-B439-4DDE-B479-82D7DB3CEE65}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\FPSGame">
-      <UniqueIdentifier>{0EF2F253-5C1C-4E34-8748-1F95011B68F8}</UniqueIdentifier>
+      <UniqueIdentifier>{D7B88893-9B31-4B7C-9F86-2D4A6D6CE9BB}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\FPSGame\FPSGame.Build.cs">
       <Filter>Source\FPSGame</Filter>
@@ -39,7 +39,7 @@
       <Filter>Source\FPSGame</Filter>
     </ClInclude>
     <Filter Include="Source\FPSGame\Private">
-      <UniqueIdentifier>{5212A362-B91C-4290-9329-5272CCEB27B9}</UniqueIdentifier>
+      <UniqueIdentifier>{104EE611-B9E2-4CD1-9783-260A32DE62B9}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\FPSGame\Private\FPSCharacter.cpp">
       <Filter>Source\FPSGame\Private</Filter>
@@ -57,7 +57,7 @@
       <Filter>Source\FPSGame\Private</Filter>
     </ClCompile>
     <Filter Include="Source\FPSGame\Public">
-      <UniqueIdentifier>{17FB3B2E-BDBF-4BEB-A890-17B11FAE7BC1}</UniqueIdentifier>
+      <UniqueIdentifier>{33759E3B-E855-4843-9741-A26373834E2F}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\FPSGame\Public\FPSCharacter.h">
       <Filter>Source\FPSGame\Public</Filter>

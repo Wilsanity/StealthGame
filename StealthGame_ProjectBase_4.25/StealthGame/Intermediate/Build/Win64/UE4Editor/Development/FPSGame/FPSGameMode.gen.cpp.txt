@@ -1,9 +1,9 @@
-D:\C++\Project-Stealth\StealthGame_ProjectBase_4.25\StealthGame\Intermediate\Build\Win64\UE4Editor\Development\FPSGame\Definitions.FPSGame.h
-D:\Epic Games\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
-D:\Epic Games\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-D:\C++\Project-Stealth\StealthGame_ProjectBase_4.25\StealthGame\Source\FPSGame/Public/FPSGameMode.h
-D:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
-D:\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
-D:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
-D:\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
-d:\c++\project-stealth\stealthgame_projectbase_4.25\stealthgame\intermediate\build\win64\ue4editor\inc\fpsgame\FPSGameMode.generated.h
+C:\Users\iylek\Desktop\Unreal\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Intermediate\Build\Win64\UE4Editor\Development\FPSGame\Definitions.FPSGame.h
+C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+C:\Users\iylek\Desktop\Unreal\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Source\FPSGame/Public/FPSGameMode.h
+C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
+C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
+C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
+C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
+C:\Users\iylek\Desktop\Unreal\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Intermediate\Build\Win64\UE4Editor\Inc\FPSGame\FPSGameMode.generated.h
