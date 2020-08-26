@@ -6,7 +6,7 @@
 #include "GameFramework/Actor.h"
 #include "FPSObjectiveActor.generated.h"
 
-class USphereComponent;
+class USphereComponent; // forward declaration
 
 UCLASS()
 class FPSGAME_API AFPSObjectiveActor : public AActor
@@ -19,14 +19,13 @@ public:
 
 protected:
 
-	UPROPERTY(VisibleAnywhere, Category = "Components")
-	UStaticMeshComponent* MeshComp;
+	UPROPERTY(VisibleAnywhere, Category = "Components") // exposes property, to show in blueprint
+	UStaticMeshComponent* MeshComp; // visually show that object exists
 
 	UPROPERTY(VisibleAnywhere, Category = "Components")
-	USphereComponent* SphereComp;
-
-	// expose to blueprint
-	UPROPERTY(EditDefaultsOnly, Category = "Effects");
+	USphereComponent* SphereComp; // hold col info
+	
+	UPROPERTY(EditDefaultsOnly, Category = "Effects"); // expose to blueprint
 	UParticleSystem* PickupFX;
 
 	// Called when the game starts or when spawned

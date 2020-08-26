@@ -56,32 +56,38 @@ void EmptyLinkFunctionForGeneratedCodeFPSObjectiveActor() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFPSObjectiveActor_Statics::Class_MetaDataParams[] = {
+		{ "Comment", "// forward declaration\n" },
 		{ "IncludePath", "FPSObjectiveActor.h" },
 		{ "ModuleRelativePath", "Public/FPSObjectiveActor.h" },
+		{ "ToolTip", "forward declaration" },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFPSObjectiveActor_Statics::NewProp_PickupFX_MetaData[] = {
 		{ "Category", "Effects" },
-		{ "Comment", "// expose to blueprint\n" },
+		{ "Comment", "// hold col info\n// expose to blueprint\n" },
 		{ "ModuleRelativePath", "Public/FPSObjectiveActor.h" },
-		{ "ToolTip", "expose to blueprint" },
+		{ "ToolTip", "hold col info\nexpose to blueprint" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFPSObjectiveActor_Statics::NewProp_PickupFX = { "PickupFX", nullptr, (EPropertyFlags)0x0020080000010001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFPSObjectiveActor, PickupFX), Z_Construct_UClass_UParticleSystem_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AFPSObjectiveActor_Statics::NewProp_PickupFX_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFPSObjectiveActor_Statics::NewProp_PickupFX_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFPSObjectiveActor_Statics::NewProp_SphereComp_MetaData[] = {
 		{ "Category", "Components" },
+		{ "Comment", "// visually show that object exists\n" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/FPSObjectiveActor.h" },
+		{ "ToolTip", "visually show that object exists" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFPSObjectiveActor_Statics::NewProp_SphereComp = { "SphereComp", nullptr, (EPropertyFlags)0x00200800000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFPSObjectiveActor, SphereComp), Z_Construct_UClass_USphereComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AFPSObjectiveActor_Statics::NewProp_SphereComp_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFPSObjectiveActor_Statics::NewProp_SphereComp_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFPSObjectiveActor_Statics::NewProp_MeshComp_MetaData[] = {
 		{ "Category", "Components" },
+		{ "Comment", "// exposes property, to show in blueprint\n" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/FPSObjectiveActor.h" },
+		{ "ToolTip", "exposes property, to show in blueprint" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFPSObjectiveActor_Statics::NewProp_MeshComp = { "MeshComp", nullptr, (EPropertyFlags)0x00200800000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFPSObjectiveActor, MeshComp), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AFPSObjectiveActor_Statics::NewProp_MeshComp_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFPSObjectiveActor_Statics::NewProp_MeshComp_MetaData)) };
@@ -117,7 +123,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSObjectiveActor() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFPSObjectiveActor, 561865116);
+	IMPLEMENT_CLASS(AFPSObjectiveActor, 2504239083);
 	template<> FPSGAME_API UClass* StaticClass<AFPSObjectiveActor>()
 	{
 		return AFPSObjectiveActor::StaticClass();

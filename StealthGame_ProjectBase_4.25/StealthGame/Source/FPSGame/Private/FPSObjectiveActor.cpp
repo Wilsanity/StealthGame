@@ -12,17 +12,17 @@ AFPSObjectiveActor::AFPSObjectiveActor()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	MeshComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MeshComp"));
-	MeshComp->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-	RootComponent = MeshComp;
+	MeshComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MeshComp")); // initialize as mesh component
+	MeshComp->SetCollisionEnabled(ECollisionEnabled::NoCollision); // disable collision
+	RootComponent = MeshComp; // first component in hirarchy (can see in blueprint)
 
-	SphereComp = CreateDefaultSubobject<USphereComponent>(TEXT("SphereComp"));
-	SphereComp->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
-	SphereComp->SetCollisionResponseToAllChannels(ECR_Ignore);
-	SphereComp->SetCollisionResponseToChannel(ECC_Pawn, ECR_Overlap);
+	SphereComp = CreateDefaultSubobject<USphereComponent>(TEXT("SphereComp")); // initialize as sphere component
+	SphereComp->SetCollisionEnabled(ECollisionEnabled::QueryOnly); // line traces
+	SphereComp->SetCollisionResponseToAllChannels(ECR_Ignore); // disable all channels
+	SphereComp->SetCollisionResponseToChannel(ECC_Pawn, ECR_Overlap); // alow player channel, allow pass through
 	SphereComp->SetupAttachment(MeshComp);	
 
-	//SphereComp->OnComponentBeginOverlap
+	//SphereComp->OnComponentBeginOverlap.register
 }
 
 // Called when the game starts or when spawned
@@ -40,11 +40,11 @@ void AFPSObjectiveActor::Tick(float DeltaTime)
 
 void AFPSObjectiveActor::PlayEffects() 
 {
-	UGameplayStatics::SpawnEmitterAtLocation(this, PickupFX, GetActorLocation());
+	UGameplayStatics::SpawnEmitterAtLocation(this, PickupFX, GetActorLocation()); // stationary, finds the world actor is in, then spawn effect
 }
 
 void AFPSObjectiveActor::NotifyActorBeginOverlap(AActor* OtherActor) {
 
-	Super::NotifyActorBeginOverlap(OtherActor);
+	Super::NotifyActorBeginOverlap(OtherActor); // super is base implementation
 	PlayEffects();
 }
