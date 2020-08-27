@@ -20,7 +20,7 @@ public:
 protected:
 
 	UPROPERTY(VisibleAnywhere, Category = "Components")
-	UBoxComponent* OverlapComp;
+	UBoxComponent* OverlapComp; // extaction boundaries
 
 	UPROPERTY(VisibleAnywhere, Category = "Components")
 	UDecalComponent* DecalComp;

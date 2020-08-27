@@ -164,8 +164,10 @@ void EmptyLinkFunctionForGeneratedCodeFPSExtractionZone() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFPSExtractionZone_Statics::NewProp_DecalComp_MetaData[] = {
 		{ "Category", "Components" },
+		{ "Comment", "// extaction boundaries\n" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/FPSExtractionZone.h" },
+		{ "ToolTip", "extaction boundaries" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFPSExtractionZone_Statics::NewProp_DecalComp = { "DecalComp", nullptr, (EPropertyFlags)0x00200800000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFPSExtractionZone, DecalComp), Z_Construct_UClass_UDecalComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AFPSExtractionZone_Statics::NewProp_DecalComp_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFPSExtractionZone_Statics::NewProp_DecalComp_MetaData)) };
@@ -208,7 +210,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSExtractionZone() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFPSExtractionZone, 969148691);
+	IMPLEMENT_CLASS(AFPSExtractionZone, 1269357219);
 	template<> FPSGAME_API UClass* StaticClass<AFPSExtractionZone>()
 	{
 		return AFPSExtractionZone::StaticClass();

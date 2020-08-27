@@ -84,7 +84,9 @@ void EmptyLinkFunctionForGeneratedCodeFPSCharacter() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFPSCharacter_Statics::NewProp_bIsCarryingObjective_MetaData[] = {
 		{ "Category", "Gameplay" },
+		{ "Comment", "// add a bool variable exposed to blueprint\n" },
 		{ "ModuleRelativePath", "Public/FPSCharacter.h" },
+		{ "ToolTip", "add a bool variable exposed to blueprint" },
 	};
 #endif
 	void Z_Construct_UClass_AFPSCharacter_Statics::NewProp_bIsCarryingObjective_SetBit(void* Obj)
@@ -185,7 +187,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFPSCharacter, 4024003376);
+	IMPLEMENT_CLASS(AFPSCharacter, 950543498);
 	template<> FPSGAME_API UClass* StaticClass<AFPSCharacter>()
 	{
 		return AFPSCharacter::StaticClass();

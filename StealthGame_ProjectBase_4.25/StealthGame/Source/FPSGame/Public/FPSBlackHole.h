@@ -21,7 +21,7 @@ public:
 protected:
 
 	UPROPERTY(VisibleAnywhere, Category = "Components")
-		UStaticMeshComponent* MeshComp;
+		UStaticMeshComponent* MeshComp; // sphere in the level
 
 	/* Inner sphere destroys the overlapping components */
 	UPROPERTY(VisibleAnywhere, Category = "Components")

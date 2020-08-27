@@ -49,10 +49,10 @@ void AFPSObjectiveActor::NotifyActorBeginOverlap(AActor* OtherActor) {
 	Super::NotifyActorBeginOverlap(OtherActor); // super is base implementation
 	PlayEffects();
 
-	AFPSCharacter* MyCharacter = Cast<AFPSCharacter>(OtherActor);
-	if (MyCharacter) {
+	AFPSCharacter* MyCharacter = Cast<AFPSCharacter>(OtherActor); // cast to pawns
+	if (MyCharacter) { // not null
+		// set obj bool to true, destroy objective actor (as if it is picked up)
 		MyCharacter->bIsCarryingObjective = true;
-
 		Destroy();
 	}
 }

@@ -12,9 +12,10 @@ AFPSBlackHole::AFPSBlackHole()
 	PrimaryActorTick.bCanEverTick = true;
 
 	MeshComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MeshComp"));
-	MeshComp->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	MeshComp->SetCollisionEnabled(ECollisionEnabled::NoCollision); // col disabled, want cubes/objects to go INSIDE of the black hole
 	RootComponent = MeshComp;
 
+	//
 	InnerSphereComponent = CreateDefaultSubobject<USphereComponent>(TEXT("InnerSphereComp"));
 	InnerSphereComponent->SetSphereRadius(100);
 	InnerSphereComponent->SetupAttachment(MeshComp);
@@ -22,11 +23,13 @@ AFPSBlackHole::AFPSBlackHole()
 	// Bind to Event
 	InnerSphereComponent->OnComponentBeginOverlap.AddDynamic(this, &AFPSBlackHole::OverlapInnerSphere);
 
+	
 	OuterSphereComponent = CreateDefaultSubobject<USphereComponent>(TEXT("OuterSphereComp"));
 	OuterSphereComponent->SetSphereRadius(3000);
 	OuterSphereComponent->SetupAttachment(MeshComp);
 }
 
+// destroys actor
 void AFPSBlackHole::OverlapInnerSphere(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp,
 	int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult) {
 	if (OtherActor) {
