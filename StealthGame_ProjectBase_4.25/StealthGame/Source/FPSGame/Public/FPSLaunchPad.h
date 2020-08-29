@@ -10,7 +10,6 @@ class UBoxComponent;
 class UStaticMeshComponent;
 class UArrowComponent;
 
-
 UCLASS()
 class FPSGAME_API AFPSLaunchPad : public AActor
 {

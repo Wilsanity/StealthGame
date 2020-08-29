@@ -26,6 +26,3 @@ public:
 	void OnMissionCompleted(APawn* InstigatorPawn);
 
 };
-
-
-
