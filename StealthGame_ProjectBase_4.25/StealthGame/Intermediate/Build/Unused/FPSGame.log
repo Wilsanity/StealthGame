@@ -7,13 +7,7 @@
   [Upgrade]     PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs   => Set in build.cs files to enables IWYU-style PCH model. See https://docs.unrealengine.com/en-US/Programming/BuildTools/UnrealBuildTool/IWYU/index.html. (Previously: PCHUsageMode.UseSharedPCHs).
   [Upgrade] Suppress this message by setting 'DefaultBuildSettings = BuildSettingsVersion.V2;' in FPSGameEditor.Target.cs, and explicitly overriding settings that differ from the new defaults.
   [Upgrade]
-  Building 5 actions with 12 processes...
-    [1/5] FPSAIGuard.cpp
-    [2/5] FPSGameMode.cpp
-    [3/5] UE4Editor-FPSGame.lib
-       Creating library C:\Users\iylek\Desktop\Unreal\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Intermediate\Build\Win64\UE4Editor\Development\FPSGame\UE4Editor-FPSGame.lib and object C:\Users\iylek\Desktop\Unreal\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Intermediate\Build\Win64\UE4Editor\Development\FPSGame\UE4Editor-FPSGame.exp
-    [4/5] UE4Editor-FPSGame.dll
-       Creating library C:\Users\iylek\Desktop\Unreal\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Intermediate\Build\Win64\UE4Editor\Development\FPSGame\UE4Editor-FPSGame.suppressed.lib and object C:\Users\iylek\Desktop\Unreal\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Intermediate\Build\Win64\UE4Editor\Development\FPSGame\UE4Editor-FPSGame.suppressed.exp
-    [5/5] FPSGameEditor.target
-  Total time in Parallel executor: 3.75 seconds
-  Total execution time: 4.21 seconds
+  Building 1 action with 12 processes...
+    [1/1] FPSGameEditor.target
+  Total time in Parallel executor: 0.16 seconds
+  Total execution time: 0.60 seconds
