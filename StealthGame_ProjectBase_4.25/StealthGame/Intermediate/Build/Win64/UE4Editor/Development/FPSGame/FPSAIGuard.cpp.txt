@@ -1,0 +1,16 @@
+C:\Users\iylek\Desktop\Unreal\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Intermediate\Build\Win64\UE4Editor\Development\FPSGame\Definitions.FPSGame.h
+C:\Users\iylek\Desktop\Unreal\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Source\FPSGame\Public\FPSAIGuard.h
+C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
+C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
+C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
+C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
+C:\Users\iylek\Desktop\Unreal\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Intermediate\Build\Win64\UE4Editor\Inc\FPSGame\FPSAIGuard.generated.h
+C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\AIModule\Classes\Perception/PawnSensingComponent.h
+C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\PawnSensingComponent.generated.h
+C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Public\DrawDebugHelpers.h
+C:\Users\iylek\Desktop\Unreal\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Source\FPSGame\Public\FPSGameMode.h
+C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
+C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
+C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
+C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
+C:\Users\iylek\Desktop\Unreal\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Intermediate\Build\Win64\UE4Editor\Inc\FPSGame\FPSGameMode.generated.h

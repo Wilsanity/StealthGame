@@ -19,7 +19,7 @@ class AFPSProjectile : public AActor
 protected:
 
 	/** Sphere collision component */
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category= "Projectile")
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Projectile")
 	USphereComponent* CollisionComp;
 
 	/** Projectile movement component */

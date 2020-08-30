@@ -16,7 +16,7 @@ AFPSGameMode::AFPSGameMode()
 	HUDClass = AFPSHUD::StaticClass();
 }
 
-void AFPSGameMode::CompleteMission(APawn* InstigatorPawn) {
+void AFPSGameMode::CompleteMission(APawn* InstigatorPawn, bool bMissionSuccess) {
 	if (InstigatorPawn) {
 		InstigatorPawn->DisableInput(nullptr); // disable play movement (optional)
 
@@ -34,7 +34,7 @@ void AFPSGameMode::CompleteMission(APawn* InstigatorPawn) {
 
 			APlayerController* PC = Cast<APlayerController>(InstigatorPawn->GetController());
 			if (PC) {
-				PC->SetViewTargetWithBlend(nullptr, 0.5f, EViewTargetBlendFunction::VTBlend_Cubic);
+				PC->SetViewTargetWithBlend(nullptr, 0.3f, EViewTargetBlendFunction::VTBlend_Cubic);
 			}
 		}
 		}
@@ -44,5 +44,5 @@ void AFPSGameMode::CompleteMission(APawn* InstigatorPawn) {
 		}
 	}
 
-	OnMissionCompleted(InstigatorPawn);
+	OnMissionCompleted(InstigatorPawn, bMissionSuccess);
 }

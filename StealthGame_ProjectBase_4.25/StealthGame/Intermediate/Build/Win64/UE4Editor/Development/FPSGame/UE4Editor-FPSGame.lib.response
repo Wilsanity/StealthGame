@@ -7,6 +7,7 @@
 /IGNORE:4221
 /NODEFAULTLIB
 "C:\Users\iylek\Desktop\Unreal\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Intermediate\Build\Win64\FPSGameEditor\Development\Engine\SharedPCH.Engine.h.obj"
+"C:\Users\iylek\Desktop\Unreal\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Intermediate\Build\Win64\UE4Editor\Development\FPSGame\FPSAIGuard.cpp.obj"
 "C:\Users\iylek\Desktop\Unreal\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Intermediate\Build\Win64\UE4Editor\Development\FPSGame\FPSBlackHole.cpp.obj"
 "C:\Users\iylek\Desktop\Unreal\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Intermediate\Build\Win64\UE4Editor\Development\FPSGame\FPSCharacter.cpp.obj"
 "C:\Users\iylek\Desktop\Unreal\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Intermediate\Build\Win64\UE4Editor\Development\FPSGame\FPSExtractionZone.cpp.obj"
@@ -17,6 +18,7 @@
 "C:\Users\iylek\Desktop\Unreal\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Intermediate\Build\Win64\UE4Editor\Development\FPSGame\FPSProjectile.cpp.obj"
 "C:\Users\iylek\Desktop\Unreal\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Intermediate\Build\Win64\UE4Editor\Development\FPSGame\LaunchPad.cpp.obj"
 "C:\Users\iylek\Desktop\Unreal\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Intermediate\Build\Win64\UE4Editor\Development\FPSGame\FPSGame.cpp.obj"
+"C:\Users\iylek\Desktop\Unreal\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Intermediate\Build\Win64\UE4Editor\Development\FPSGame\FPSAIGuard.gen.cpp.obj"
 "C:\Users\iylek\Desktop\Unreal\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Intermediate\Build\Win64\UE4Editor\Development\FPSGame\FPSBlackHole.gen.cpp.obj"
 "C:\Users\iylek\Desktop\Unreal\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Intermediate\Build\Win64\UE4Editor\Development\FPSGame\FPSCharacter.gen.cpp.obj"
 "C:\Users\iylek\Desktop\Unreal\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Intermediate\Build\Win64\UE4Editor\Development\FPSGame\FPSExtractionZone.gen.cpp.obj"
