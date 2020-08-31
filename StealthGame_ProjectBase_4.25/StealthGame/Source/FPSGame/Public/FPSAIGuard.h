@@ -58,4 +58,21 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 
+protected:
+
+	UFUNCTION()
+		void OnRep_GuardState();
+
+	UPROPERTY(EditInstanceOnly, Category = "AI")
+		bool bPatrol;
+
+	UPROPERTY(EditInstanceOnly, Category = "AI", meta = (EditCondition = "bPatrol"))
+		AActor* firstPatrolPoint;
+
+	UPROPERTY(EditInstanceOnly, Category = "AI", meta = (EditCondition = "bPatrol"))
+		AActor* secondPatrolPoint;
+
+	AActor* currentPatrolPoint;
+	
+	void moveToNextPatrolPoint();
 };

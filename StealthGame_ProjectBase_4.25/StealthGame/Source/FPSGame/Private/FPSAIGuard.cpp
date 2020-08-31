@@ -5,6 +5,8 @@
 #include "Perception/PawnSensingComponent.h"
 #include "DrawDebugHelpers.h"
 #include "FPSGameMode.h"
+#include "Net/UnrealNetwork.h"
+#include "AI/Navigation/NavigationSystem.h"
 
 // Sets default values
 AFPSAIGuard::AFPSAIGuard()
@@ -24,6 +26,9 @@ void AFPSAIGuard::BeginPlay()
 {
 	Super::BeginPlay();
 	OriginalRotation = GetActorRotation();
+	if (bPatrol) {
+		moveToNextPatrolPoint();
+	}
 }
 
 // Called every frame
@@ -31,6 +36,13 @@ void AFPSAIGuard::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	if (currentPatrolPoint) {
+		FVector delta = GetActorLocation() - currentPatrolPoint->GetActorLocation();
+		float distanceToGoal = delta.Size();
+		if (distanceToGoal < 50) {
+			moveToNextPatrolPoint();
+		}
+	}
 }
 
 void AFPSAIGuard::OnPawnSeen(APawn* SeenPawn) {
@@ -45,6 +57,11 @@ void AFPSAIGuard::OnPawnSeen(APawn* SeenPawn) {
 		GM->CompleteMission(SeenPawn, false); // pass in player that completed mission
 	}
 	SetGuardState(EAIState::Alerted);
+
+	AController* controller = GetController();
+	if (controller) {
+		controller->StopMovement();																																																																																										
+	}
 }
 
 void AFPSAIGuard::OnNoiseHeard(APawn* NoiseInstigator, const FVector& Location, float Volume) {
@@ -69,6 +86,10 @@ void AFPSAIGuard::OnNoiseHeard(APawn* NoiseInstigator, const FVector& Location, 
 
 	SetGuardState(EAIState::Suspicious);
 	
+	AController* controller = GetController();
+	if (controller) {
+		controller->StopMovement();
+	}	
 }
 
 void AFPSAIGuard::ResetOrientation() {
@@ -79,6 +100,14 @@ void AFPSAIGuard::ResetOrientation() {
 
 	SetActorRotation(OriginalRotation);
 	SetGuardState(EAIState::Idle);
+
+	if (bPatrol) {
+		moveToNextPatrolPoint();
+	}
+}
+
+void AFPSAIGuard::OnRep_GuardState() {
+	OnStateChanged(GuardState);
 }
 
 void AFPSAIGuard::SetGuardState(EAIState NewState) {
@@ -88,6 +117,22 @@ void AFPSAIGuard::SetGuardState(EAIState NewState) {
 		}
 
 		GuardState = NewState;
-		OnStateChanged(GuardState);
+		OnRep_GuardState();
 	
+}
+
+void AFPSAIGuard::moveToNextPatrolPoint() {
+	if (currentPatrolPoint == nullptr || currentPatrolPoint == secondPatrolPoint) {
+		currentPatrolPoint = firstPatrolPoint;
+	}
+	else {
+		currentPatrolPoint = secondPatrolPoint;
+	}
+
+	UNavigationSystem::SimpleMoveToActor(GetController(), currentPatrolPoint);
+}
+
+void AFPSAIGuard::GetLifetimeReplicatedProps(TArray < FLifetimeProperty > & OutLifetimeProps) const {
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+	DOREPLIFETIME(AFPSAIGuard, GuardState);
 }
