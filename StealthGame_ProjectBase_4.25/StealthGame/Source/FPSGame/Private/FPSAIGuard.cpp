@@ -1,23 +1,24 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
 #include "FPSAIGuard.h"
 #include "Perception/PawnSensingComponent.h"
 #include "DrawDebugHelpers.h"
 #include "FPSGameMode.h"
 #include "Net/UnrealNetwork.h"
-#include "AI/Navigation/NavigationSystem.h"
+#include "Blueprint/AIBlueprintHelperLibrary.h"
+
 
 // Sets default values
 AFPSAIGuard::AFPSAIGuard()
 {
- 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
 	PawnSensingComp = CreateDefaultSubobject<UPawnSensingComponent>(TEXT("PawnSensingComp"));
 
 	PawnSensingComp->OnSeePawn.AddDynamic(this, &AFPSAIGuard::OnPawnSeen);
 	PawnSensingComp->OnHearNoise.AddDynamic(this, &AFPSAIGuard::OnNoiseHeard);
+
 	GuardState = EAIState::Idle;
 }
 
@@ -25,48 +26,44 @@ AFPSAIGuard::AFPSAIGuard()
 void AFPSAIGuard::BeginPlay()
 {
 	Super::BeginPlay();
+
 	OriginalRotation = GetActorRotation();
-	if (bPatrol) {
-		moveToNextPatrolPoint();
+
+	if (bPatrol)
+	{
+		MoveToNextPatrolPoint();
 	}
 }
 
-// Called every frame
-void AFPSAIGuard::Tick(float DeltaTime)
+void AFPSAIGuard::OnPawnSeen(APawn* SeenPawn)
 {
-	Super::Tick(DeltaTime);
-
-	if (currentPatrolPoint) {
-		FVector delta = GetActorLocation() - currentPatrolPoint->GetActorLocation();
-		float distanceToGoal = delta.Size();
-		if (distanceToGoal < 50) {
-			moveToNextPatrolPoint();
-		}
-	}
-}
-
-void AFPSAIGuard::OnPawnSeen(APawn* SeenPawn) {
-
-	if (SeenPawn == nullptr) {
+	if (SeenPawn == nullptr)
+	{
 		return;
 	}
+
 	DrawDebugSphere(GetWorld(), SeenPawn->GetActorLocation(), 32.0f, 12, FColor::Red, false, 10.0f);
 
 	AFPSGameMode* GM = Cast<AFPSGameMode>(GetWorld()->GetAuthGameMode());
-	if (GM) {
-		GM->CompleteMission(SeenPawn, false); // pass in player that completed mission
+	if (GM)
+	{
+		GM->CompleteMission(SeenPawn, false);
 	}
+
 	SetGuardState(EAIState::Alerted);
 
-	AController* controller = GetController();
-	if (controller) {
-		controller->StopMovement();																																																																																										
+	// Stop Movement if Patrolling
+	if (Controller)
+	{
+		Controller->StopMovement();
 	}
 }
 
-void AFPSAIGuard::OnNoiseHeard(APawn* NoiseInstigator, const FVector& Location, float Volume) {
 
-	if (GuardState == EAIState::Alerted) {
+void AFPSAIGuard::OnNoiseHeard(APawn* NoiseInstigator, const FVector& Location, float Volume)
+{
+	if (GuardState == EAIState::Alerted)
+	{
 		return;
 	}
 
@@ -85,54 +82,94 @@ void AFPSAIGuard::OnNoiseHeard(APawn* NoiseInstigator, const FVector& Location, 
 	GetWorldTimerManager().SetTimer(TimerHandle_ResetOrientation, this, &AFPSAIGuard::ResetOrientation, 3.0f);
 
 	SetGuardState(EAIState::Suspicious);
-	
-	AController* controller = GetController();
-	if (controller) {
-		controller->StopMovement();
-	}	
+
+	// Stop Movement if Patrolling
+	if (Controller)
+	{
+		Controller->StopMovement();
+	}
 }
 
-void AFPSAIGuard::ResetOrientation() {
 
-	if (GuardState == EAIState::Alerted) {
+void AFPSAIGuard::ResetOrientation()
+{
+	if (GuardState == EAIState::Alerted)
+	{
 		return;
 	}
 
 	SetActorRotation(OriginalRotation);
+
 	SetGuardState(EAIState::Idle);
 
-	if (bPatrol) {
-		moveToNextPatrolPoint();
+	// Stopped investigating...if we are a patrolling pawn, pick a new patrol point to move to
+	if (bPatrol)
+	{
+		MoveToNextPatrolPoint();
 	}
 }
 
-void AFPSAIGuard::OnRep_GuardState() {
+
+void AFPSAIGuard::OnRep_GuardState()
+{
 	OnStateChanged(GuardState);
 }
 
-void AFPSAIGuard::SetGuardState(EAIState NewState) {
-	
-		if (GuardState == NewState) {
-			return;
+
+void AFPSAIGuard::SetGuardState(EAIState NewState)
+{
+	if (GuardState == NewState)
+	{
+		return;
+	}
+
+	GuardState = NewState;
+	OnRep_GuardState();
+}
+
+
+// Called every frame
+void AFPSAIGuard::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+
+	// Patrol Goal Checks
+	if (CurrentPatrolPoint)
+	{
+		FVector Delta = GetActorLocation() - CurrentPatrolPoint->GetActorLocation();
+		float DistanceToGoal = Delta.Size();
+
+		// Check if we are within 75 units of our goal, if so - pick a new patrol point
+		// Keep in mind this includes vertical height difference! If your patrol point is in the floor, the distance to the pivot of guard is higher
+		// In that case you may need to increase this value in your project or better align control points (ideally you remove Z axis all together by using
+		// Alternative: float DistanceToGoal = FMath::Distance2D(GetActorLocation(), CurrentPatrolPoint->GetActorLocation());
+
+		if (DistanceToGoal < 75)
+		{
+			MoveToNextPatrolPoint();
 		}
-
-		GuardState = NewState;
-		OnRep_GuardState();
-	
+	}
 }
 
-void AFPSAIGuard::moveToNextPatrolPoint() {
-	if (currentPatrolPoint == nullptr || currentPatrolPoint == secondPatrolPoint) {
-		currentPatrolPoint = firstPatrolPoint;
+void AFPSAIGuard::MoveToNextPatrolPoint()
+{
+	// Assign next patrol point.
+	if (CurrentPatrolPoint == nullptr || CurrentPatrolPoint == SecondPatrolPoint)
+	{
+		CurrentPatrolPoint = FirstPatrolPoint;
 	}
-	else {
-		currentPatrolPoint = secondPatrolPoint;
+	else
+	{
+		CurrentPatrolPoint = SecondPatrolPoint;
 	}
 
-	UNavigationSystem::SimpleMoveToActor(GetController(), currentPatrolPoint);
+	UAIBlueprintHelperLibrary::SimpleMoveToActor(GetController(), CurrentPatrolPoint);
 }
 
-void AFPSAIGuard::GetLifetimeReplicatedProps(TArray < FLifetimeProperty > & OutLifetimeProps) const {
+
+void AFPSAIGuard::GetLifetimeReplicatedProps(TArray< FLifetimeProperty >& OutLifetimeProps) const
+{
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
 	DOREPLIFETIME(AFPSAIGuard, GuardState);
 }
