@@ -23,7 +23,10 @@ AFPSObjectiveActor::AFPSObjectiveActor()
 	SphereComp->SetCollisionResponseToChannel(ECC_Pawn, ECR_Overlap); // alow player channel, allow pass through
 	SphereComp->SetupAttachment(MeshComp);	
 
-	//SphereComp->OnComponentBeginOverlap.register
+
+	SetReplicates(true);
+
+
 }
 
 // Called when the game starts or when spawned
@@ -32,12 +35,6 @@ void AFPSObjectiveActor::BeginPlay()
 	Super::BeginPlay();
 	PlayEffects();
 }
-
-// Called every frame
-//void AFPSObjectiveActor::Tick(float DeltaTime)
-//{
-//	Super::Tick(DeltaTime);
-//}
 
 void AFPSObjectiveActor::PlayEffects() 
 {
@@ -49,10 +46,13 @@ void AFPSObjectiveActor::NotifyActorBeginOverlap(AActor* OtherActor) {
 	Super::NotifyActorBeginOverlap(OtherActor); // super is base implementation
 	PlayEffects();
 
-	AFPSCharacter* MyCharacter = Cast<AFPSCharacter>(OtherActor); // cast to pawns
-	if (MyCharacter) { // not null
-		// set obj bool to true, destroy objective actor (as if it is picked up)
-		MyCharacter->bIsCarryingObjective = true;
-		Destroy();
+	if (HasAuthority()) {
+
+		AFPSCharacter* MyCharacter = Cast<AFPSCharacter>(OtherActor); // cast to pawns
+		if (MyCharacter) { // not null
+			// set obj bool to true, destroy objective actor (as if it is picked up)
+			MyCharacter->bIsCarryingObjective = true;
+			Destroy();
+		}
 	}
 }
