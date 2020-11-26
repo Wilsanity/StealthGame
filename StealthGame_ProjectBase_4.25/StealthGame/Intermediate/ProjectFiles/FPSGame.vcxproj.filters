@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\FPSGame.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{04F7A442-10E3-4EC3-80AA-8CCCEA02300B}</UniqueIdentifier>
+      <UniqueIdentifier>{F1FF6A6F-E373-4629-B8DD-DE133AB4A28F}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\FPSGame.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{1CD3D51A-E76B-4FD8-BC36-E0D6A05E2E6E}</UniqueIdentifier>
+      <UniqueIdentifier>{D512C250-3AA6-485E-ABD8-231DA5C11E86}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -26,8 +26,56 @@
     <None Include="..\..\Config\DefaultInput.ini">
       <Filter>Config</Filter>
     </None>
+    <Filter Include="Plugins">
+      <UniqueIdentifier>{0D54132B-C446-49B2-A3BB-9A2D21CBA153}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\LaunchPadPlugin">
+      <UniqueIdentifier>{29E82B02-1B45-4279-B0FD-A1E32151C07B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\LaunchPadPlugin\Source">
+      <UniqueIdentifier>{303C6372-66D2-46D1-BD70-41A838077203}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\LaunchPadPlugin\Source\LaunchPadPlugin">
+      <UniqueIdentifier>{3E0BB595-B822-4003-854F-83A12221B3EB}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\LaunchPadPlugin\Source\LaunchPadPlugin\LaunchPadPlugin.Build.cs">
+      <Filter>Plugins\LaunchPadPlugin\Source\LaunchPadPlugin</Filter>
+    </None>
+    <Filter Include="Plugins\LaunchPadPlugin\Source\LaunchPadPlugin\Private">
+      <UniqueIdentifier>{6F018C76-B2C1-4E7A-9515-7936644D65C2}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\LaunchPadPlugin\Source\LaunchPadPlugin\Private\LaunchPadPlugin.cpp">
+      <Filter>Plugins\LaunchPadPlugin\Source\LaunchPadPlugin\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\LaunchPadPlugin\Source\LaunchPadPlugin\Private\LaunchPad_Plug.cpp">
+      <Filter>Plugins\LaunchPadPlugin\Source\LaunchPadPlugin\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\LaunchPadPlugin\Source\LaunchPadPlugin\Private\Test.cpp">
+      <Filter>Plugins\LaunchPadPlugin\Source\LaunchPadPlugin\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\LaunchPadPlugin\Source\LaunchPadPlugin\Public">
+      <UniqueIdentifier>{115E7341-7646-4C12-B387-F0FEAA060442}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\LaunchPadPlugin\Source\LaunchPadPlugin\Public\LaunchPadPlugin.h">
+      <Filter>Plugins\LaunchPadPlugin\Source\LaunchPadPlugin\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\LaunchPadPlugin\Source\LaunchPadPlugin\Public\LaunchPad_Plug.h">
+      <Filter>Plugins\LaunchPadPlugin\Source\LaunchPadPlugin\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\LaunchPadPlugin\Source\LaunchPadPlugin\Public\Test.h">
+      <Filter>Plugins\LaunchPadPlugin\Source\LaunchPadPlugin\Public</Filter>
+    </ClInclude>
+    <None Include="..\..\Plugins\LaunchPadPlugin\LaunchPadPlugin.uplugin">
+      <Filter>Plugins\LaunchPadPlugin</Filter>
+    </None>
+    <Filter Include="Plugins\LaunchPadPlugin\Resources">
+      <UniqueIdentifier>{746933FD-5103-4159-BE00-28DD79B593FB}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\LaunchPadPlugin\Resources\Icon128.png">
+      <Filter>Plugins\LaunchPadPlugin\Resources</Filter>
+    </None>
     <Filter Include="Source\FPSGame">
-      <UniqueIdentifier>{56421A7A-BB61-41D6-B910-BA0C7EB7FB9E}</UniqueIdentifier>
+      <UniqueIdentifier>{7F671872-5539-453F-BB06-0729E82C8D82}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\FPSGame\FPSGame.Build.cs">
       <Filter>Source\FPSGame</Filter>
@@ -39,7 +87,7 @@
       <Filter>Source\FPSGame</Filter>
     </ClInclude>
     <Filter Include="Source\FPSGame\Private">
-      <UniqueIdentifier>{B5EDA705-DBF5-4675-8DD3-1C67BF7A87DB}</UniqueIdentifier>
+      <UniqueIdentifier>{53593A02-9C73-4E3D-AC90-9A7FC6F8F409}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\FPSGame\Private\FPSAIGuard.cpp">
       <Filter>Source\FPSGame\Private</Filter>
@@ -71,8 +119,11 @@
     <ClCompile Include="..\..\Source\FPSGame\Private\LaunchPad.cpp">
       <Filter>Source\FPSGame\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\FPSGame\Private\LaunchPadPlug.cpp">
+      <Filter>Source\FPSGame\Private</Filter>
+    </ClCompile>
     <Filter Include="Source\FPSGame\Public">
-      <UniqueIdentifier>{A30ADDDD-D86E-490B-8AAB-41415E68FF11}</UniqueIdentifier>
+      <UniqueIdentifier>{87C6531A-2CE1-4F8B-BC47-2BF4BFE5D77F}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\FPSGame\Public\FPSAIGuard.h">
       <Filter>Source\FPSGame\Public</Filter>
@@ -102,6 +153,9 @@
       <Filter>Source\FPSGame\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\FPSGame\Public\LaunchPad.h">
+      <Filter>Source\FPSGame\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\FPSGame\Public\LaunchPadPlug.h">
       <Filter>Source\FPSGame\Public</Filter>
     </ClInclude>
   </ItemGroup>

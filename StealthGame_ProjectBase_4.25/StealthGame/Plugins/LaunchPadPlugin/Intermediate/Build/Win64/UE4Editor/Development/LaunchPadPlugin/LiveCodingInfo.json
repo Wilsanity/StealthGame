@@ -1,0 +1,15 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.LaunchPadPlugin.cpp.obj": [
+			"LaunchPad_Plug.cpp.obj",
+			"LaunchPadPlugin.cpp.obj",
+			"Test.cpp.obj"
+		],
+		"Module.LaunchPadPlugin.gen.cpp.obj": [
+			"LaunchPad_Plug.gen.cpp.obj",
+			"LaunchPadPlugin.init.gen.cpp.obj",
+			"Test.gen.cpp.obj"
+		]
+	}
+}

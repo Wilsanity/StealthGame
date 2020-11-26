@@ -1,0 +1,13 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-LaunchPadPlugin-0002.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\iylek\Desktop\Unreal\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Intermediate\Build\Win64\FPSGameEditor\Development\Engine\SharedPCH.Engine.h.obj"
+"C:\Users\iylek\Desktop\Unreal\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Plugins\LaunchPadPlugin\Intermediate\Build\Win64\UE4Editor\Development\LaunchPadPlugin\LaunchPadPlugin.cpp.obj"
+"C:\Users\iylek\Desktop\Unreal\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Plugins\LaunchPadPlugin\Intermediate\Build\Win64\UE4Editor\Development\LaunchPadPlugin\Default.rc2.res"
+/OUT:"C:\Users\iylek\Desktop\Unreal\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Plugins\LaunchPadPlugin\Intermediate\Build\Win64\UE4Editor\Development\LaunchPadPlugin\UE4Editor-LaunchPadPlugin-0002.lib"
+/INCLUDE:IMPLEMENT_MODULE_LaunchPadPlugin

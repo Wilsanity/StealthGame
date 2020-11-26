@@ -1,8 +1,9 @@
 {
 	"SourceFiles": [
 		"C:\\Users\\iylek\\Desktop\\Unreal\\StealthGame\\StealthGame_ProjectBase_4.25\\StealthGame\\Source\\FPSGame\\FPSGame.Build.cs",
+		"C:\\Users\\iylek\\Desktop\\Unreal\\StealthGame\\StealthGame_ProjectBase_4.25\\StealthGame\\Plugins\\LaunchPadPlugin\\Source\\LaunchPadPlugin\\LaunchPadPlugin.Build.cs",
 		"C:\\Users\\iylek\\Desktop\\Unreal\\StealthGame\\StealthGame_ProjectBase_4.25\\StealthGame\\Source\\FPSGame.Target.cs",
 		"C:\\Users\\iylek\\Desktop\\Unreal\\StealthGame\\StealthGame_ProjectBase_4.25\\StealthGame\\Source\\FPSGameEditor.Target.cs"
 	],
-	"EngineVersion": "4.25.3"
+	"EngineVersion": "4.25.4"
 }
