@@ -1,0 +1,13 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-BlackHole.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\Unreal Projects\ProjectStealth\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Intermediate\Build\Win64\FPSGameEditor\Development\Engine\SharedPCH.Engine.h.obj"
+"D:\Unreal Projects\ProjectStealth\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Plugins\BlackHole\Intermediate\Build\Win64\UE4Editor\Development\BlackHole\BlackHole.cpp.obj"
+"D:\Unreal Projects\ProjectStealth\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Plugins\BlackHole\Intermediate\Build\Win64\UE4Editor\Development\BlackHole\Default.rc2.res"
+/OUT:"D:\Unreal Projects\ProjectStealth\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Plugins\BlackHole\Intermediate\Build\Win64\UE4Editor\Development\BlackHole\UE4Editor-BlackHole.lib"
+/INCLUDE:IMPLEMENT_MODULE_BlackHole

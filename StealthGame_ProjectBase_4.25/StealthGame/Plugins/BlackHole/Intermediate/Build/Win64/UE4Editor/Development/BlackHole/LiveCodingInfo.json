@@ -1,0 +1,13 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.BlackHole.cpp.obj": [
+			"BlackHole.cpp.obj",
+			"BlackHolePlugin.cpp.obj"
+		],
+		"Module.BlackHole.gen.cpp.obj": [
+			"BlackHole.init.gen.cpp.obj",
+			"BlackHolePlugin.gen.cpp.obj"
+		]
+	}
+}

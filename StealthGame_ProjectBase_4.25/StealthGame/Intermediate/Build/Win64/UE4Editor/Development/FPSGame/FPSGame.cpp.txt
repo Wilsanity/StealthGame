@@ -1,2 +1,2 @@
-C:\Users\iylek\Desktop\Unreal\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Intermediate\Build\Win64\UE4Editor\Development\FPSGame\Definitions.FPSGame.h
-C:\Users\iylek\Desktop\Unreal\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Source\FPSGame\FPSGame.h
+D:\Unreal Projects\ProjectStealth\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Intermediate\Build\Win64\UE4Editor\Development\FPSGame\Definitions.FPSGame.h
+D:\Unreal Projects\ProjectStealth\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Source\FPSGame\FPSGame.h

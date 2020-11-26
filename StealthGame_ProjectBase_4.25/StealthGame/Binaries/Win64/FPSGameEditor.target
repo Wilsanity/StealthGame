@@ -29,6 +29,14 @@
 			"Type": "Executable"
 		},
 		{
+			"Path": "$(ProjectDir)/Plugins/BlackHole/Binaries/Win64/UE4Editor-BlackHole.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/BlackHole/Binaries/Win64/UE4Editor-BlackHole.pdb",
+			"Type": "SymbolFile"
+		},
+		{
 			"Path": "$(ProjectDir)/Plugins/LaunchPadPlugin/Binaries/Win64/UE4Editor-LaunchPadPlugin.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -2221,6 +2229,10 @@
 			"Type": "RequiredResource"
 		},
 		{
+			"Path": "$(ProjectDir)/Plugins/BlackHole/Binaries/Win64/UE4Editor.modules",
+			"Type": "RequiredResource"
+		},
+		{
 			"Path": "$(ProjectDir)/Plugins/LaunchPadPlugin/Binaries/Win64/UE4Editor.modules",
 			"Type": "RequiredResource"
 		},
@@ -2628,6 +2640,10 @@
 	"RuntimeDependencies": [
 		{
 			"Path": "$(ProjectDir)/FPSGame.uproject",
+			"Type": "UFS"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/BlackHole/BlackHole.uplugin",
 			"Type": "UFS"
 		},
 		{

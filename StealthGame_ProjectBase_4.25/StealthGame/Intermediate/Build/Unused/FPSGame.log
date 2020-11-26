@@ -1,2 +1,20 @@
-﻿  Target is up to date
-  Total execution time: 0.46 seconds
+﻿  Deleted hot-reload file: D:\Unreal Projects\ProjectStealth\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Plugins\LaunchPadPlugin\Binaries\Win64\UE4Editor-LaunchPadPlugin-0001.dll
+  Deleted hot-reload file: D:\Unreal Projects\ProjectStealth\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Plugins\LaunchPadPlugin\Intermediate\Build\Win64\UE4Editor\Development\LaunchPadPlugin\UE4Editor-LaunchPadPlugin-0001.lib
+  Building FPSGameEditor...
+  Using Visual Studio 2019 14.28.29334 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+  [Upgrade]
+  [Upgrade] Using backward-compatible build settings. The latest version of UE4 sets the following values by default, which may require code changes:
+  [Upgrade]     bLegacyPublicIncludePaths = false                 => Omits subfolders from public include paths to reduce compiler command line length. (Previously: true).
+  [Upgrade]     ShadowVariableWarningLevel = WarningLevel.Error   => Treats shadowed variable warnings as errors. (Previously: WarningLevel.Warning).
+  [Upgrade]     PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs   => Set in build.cs files to enables IWYU-style PCH model. See https://docs.unrealengine.com/en-US/Programming/BuildTools/UnrealBuildTool/IWYU/index.html. (Previously: PCHUsageMode.UseSharedPCHs).
+  [Upgrade] Suppress this message by setting 'DefaultBuildSettings = BuildSettingsVersion.V2;' in FPSGameEditor.Target.cs, and explicitly overriding settings that differ from the new defaults.
+  [Upgrade]
+  Building 4 actions with 12 processes...
+    [1/4] Module.BlackHole.cpp
+    [2/4] UE4Editor-BlackHole.lib
+       Creating library D:\Unreal Projects\ProjectStealth\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Plugins\BlackHole\Intermediate\Build\Win64\UE4Editor\Development\BlackHole\UE4Editor-BlackHole.lib and object D:\Unreal Projects\ProjectStealth\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Plugins\BlackHole\Intermediate\Build\Win64\UE4Editor\Development\BlackHole\UE4Editor-BlackHole.exp
+    [3/4] UE4Editor-BlackHole.dll
+       Creating library D:\Unreal Projects\ProjectStealth\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Plugins\BlackHole\Intermediate\Build\Win64\UE4Editor\Development\BlackHole\UE4Editor-BlackHole.suppressed.lib and object D:\Unreal Projects\ProjectStealth\StealthGame\StealthGame_ProjectBase_4.25\StealthGame\Plugins\BlackHole\Intermediate\Build\Win64\UE4Editor\Development\BlackHole\UE4Editor-BlackHole.suppressed.exp
+    [4/4] FPSGameEditor.target
+  Total time in Parallel executor: 21.51 seconds
+  Total execution time: 22.03 seconds
